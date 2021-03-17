@@ -1,6 +1,24 @@
 # Python Template Repo
 
-## Logging
+Lean python boilerplate template for creating new projects.
+
+## Setup
+
+By default make will use `Python 3.9` as defualt *python version*. You can change
+it —`PYTHON_VERSION`, in [Makefile](./Makefile), or define in `os environment` or
+in [.env](./.env).
+
+
+In to order setup the repo run below command. This will install `virtualenv`,
+`requirements` and `pre-commit`.
+
+```bash
+$ make setup
+```
+
+## Configurations
+
+### Logging
 
 Config comes from [logging.ini](./logging.ini) file. Example usage:
 
