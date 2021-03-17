@@ -1,6 +1,37 @@
 # Python Template Repo
 
-## Logging
+Lean python boilerplate template for creating new projects.
+
+## Setup
+
+By default make will use `Python 3.9` as defualt *python version*. You can change
+it —`PYTHON_VERSION`, in [Makefile](./Makefile), or define in `os environment` or
+in [.env](./.env).
+
+
+In to order setup the repo run below command. This will install `virtualenv`,
+`requirements` and `pre-commit`.
+
+```bash
+$ make setup
+```
+
+### Django Setup
+
+By default make will use `project` as defualt *project name*. You can change
+it —`PROJECT_NAME`, in [Makefile](./django/Makefile), or define in `os environment` or
+in [.env](./django/.env).
+
+In to order setup django project run below command. This will install
+`requirements`, start `project`, `migrate` database and create a `super user`.
+
+```bash
+$ make django-setup
+```
+
+## Configurations
+
+### Logging
 
 Config comes from [logging.ini](./logging.ini) file. Example usage:
 
@@ -26,7 +57,16 @@ logger.warning('And this, too')
 
 For more info about logging look at this article: [Python Logging Config].
 
+## Author
+
+[Serhat Teker]
+
+## LICENSE
+
+[LICENSE](./LICENSE)
+
 
 
 
 [Python Logging Config]: https://tech.serhatteker.com/post/2019-07/python-logging-config/
+[Serhat Teker]: https://serhatteker.com

@@ -1,4 +1,7 @@
-# Makefile for YADRTA Projects
+# -------------------------------------------------------------------------------------
+# Local Dev for Python Projects
+# Author : Serhat Teker <serhat.teker@gmail.com>
+# -------------------------------------------------------------------------------------
 SHELL := /bin/bash
 
 # Variables
