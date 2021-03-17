@@ -31,9 +31,11 @@ help: ## Show this help
 venv: ## Make a new virtual environment
 	# python3 -m venv $(VENV) && source $(BIN)/activate
 	virtualenv -p python3.9 $(VENV) && source $(BIN)/activate
-
-install: venv ## Make venv and install local requirements
+install: install-requirements install-pre-commit ## Install requirements and initiate pre-commit
+install-requirements: venv ## Make venv and install local requirements
 	$(BIN)/pip install -r requirements.txt
+install-pre-commit:
+	pre-commit install
 
 migrate: ## Make migrate
 	$(PYTHON) manage.py migrate
