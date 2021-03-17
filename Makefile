@@ -11,9 +11,9 @@ PYTHON3		:= $(BIN)/python3
 PYTHON		:= $(PYTHON3)
 
 include $(ENV)
-# Local environment variables for Django
-# include $(ENVS)/.local/.django
-# include $(ENVS)/.local/.postgres
+
+# Export all variable to sub-make/shell
+export
 
 .PHONY: help venv install migrate startproject runserver django-shell db-up db-shell test coverage travis
 
