@@ -1,4 +1,4 @@
-# Template
+# Python Template Repo
 
 ## Logging
 
@@ -29,4 +29,4 @@ For more info about logging look at this article: [Python Logging Config].
 
 
 
-[Python Logging Config] :https://tech.serhatteker.com/post/2019-07/python-logging-config/
+[Python Logging Config]: https://tech.serhatteker.com/post/2019-07/python-logging-config/
