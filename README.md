@@ -2,6 +2,11 @@
 
 Lean python boilerplate template for creating new projects.
 
+## Branches
+
+- [master]: Default python branch
+- [django]: For Django projects
+
 ## Setup
 
 By default make will use `Python 3.9` as defualt *python version*. You can change
@@ -70,3 +75,5 @@ For more info about logging look at this article: [Python Logging Config].
 
 [Python Logging Config]: https://tech.serhatteker.com/post/2019-07/python-logging-config/
 [Serhat Teker]: https://serhatteker.com
+[master]: https://github.com/SerhatTeker/python-template/tree/master
+[django]: https://github.com/SerhatTeker/python-template/tree/django
