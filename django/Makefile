@@ -9,6 +9,9 @@ PROJECT_NAME			?= project
 PROJECT_DIR				:= $(ROOT_DIR)/$(PROJECT_NAME)
 DB_SQLITE				:= $(ROOT_DIR)/db.sqlite3
 DJANGO_DEV_ADMIN_LOCAL	?= testadmin:testadmin@testapi.com:123asX3?23
+DJANGO_PORT				:= 8000
+LOCAL_HOST				:= 127.0.0.1
+UVICORN_APP				:= $(PROJECT_NAME).asgi:application
 # Commands
 RM				:= rm -rf
 DJANGO_ADMIN	:= django-admin
@@ -76,6 +79,9 @@ django-shell: ## Run ipython in django shell
 
 runserver: ## Run the Django server
 	$(MANAGE) runserver $(DJANGO_PORT)
+
+runserver-async: ## Run the Django async server
+	@cd $(ROOT_DIR) && uvicorn $(UVICORN_APP) --host $(LOCAL_HOST) --port $(DJANGO_PORT) --reload
 
 # Test
 # -------------------------------------------------------------------------------------

@@ -54,8 +54,13 @@ django-setup: ## Setup Django Project
 	@echo "Staring Django Setup"
 	@$(MAKE) -C $(DJANGO_DIR) startproject
 
-django-run: ## Run the Django server
+django-run: django-run-async ## Run the Django server
+
+django-run-sync: ## Run the Django server
 	@$(MAKE) -C $(DJANGO_DIR) runserver
+
+django-run-async: ## Run the Django server
+	@$(MAKE) -C $(DJANGO_DIR) runserver-async
 
 django-shell: ## Run ipython in django shell
 	@$(MAKE) -C $(DJANGO_DIR) runserver
